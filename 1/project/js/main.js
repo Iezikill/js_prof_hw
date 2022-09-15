@@ -21,6 +21,10 @@ const renderProduct = (product) => {
 
 const productsEl = document.querySelector('.products');
 
+/**
+ * Функция для формирования страницы с товарами
+ * @param {*} list объект, содержащий id, наименование и цену товара
+ */
 const renderPage = list => {
     const productsList = list.map(item => renderProduct(item)).join('');
     productsEl.innerHTML = productsList;
