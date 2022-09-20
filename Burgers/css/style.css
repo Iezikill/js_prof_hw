@@ -1,0 +1,80 @@
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #252a30;
+  text-transform: uppercase;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  background-color: #FDD48A;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0px auto;
+}
+
+.header_burger {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.logo_img img {
+  width: 90px;
+  height: 90px;
+}
+
+.logo_img:hover {
+  transform: scale(1.05);
+  transition: transform .5s;
+}
+
+.logo_title {
+  font-size: 48px;
+  font-weight: 900;
+  margin-top: 15px;
+}
+
+.main_burger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title_burger {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 36px auto;
+  text-align: center;
+}
+
+.box {
+  width: 60%;
+  padding: 15px;
+  margin: 20px;
+  background-color: #513C2F;
+}
+
+.size_burger {
+  border-radius: 150px 150px 0 0;
+}
+
+.topping_burger {
+  border-radius: 0 0 150px 150px;
+}
+
+
+.burger_parameters_title {
+  font-size: 24px;
+  font-weight: 400;
+  color: #FDD48A;
+  text-align: center;
+}
+
+.text_input {
+  text-transform: none;
+  color: #FDD48A;
+
+}
