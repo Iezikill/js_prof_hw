@@ -29,43 +29,54 @@
         <div class="box size_burger">
           <h3 class="burger_parameters_title">Выбери размер бургера</h3>
           <label for="small_size">
-            <input class="size_input" type="radio" name="size" id="small_size">
+            <input class="size_input" type="radio" name="size" id="small_size" value="Small" data-price="50"
+              data-calories="20">
             <span class="text_input">Маленький (50 рублей, 20 калорий)</span><br>
           </label>
           <label for="big_size">
-            <input class="size_input" type="radio" name="size" id="big_size">
+            <input class="size_input" type="radio" name="size" id="big_size" value="Big" data-price="100"
+              data-calories="40">
             <span class="text_input">Большой (100 рублей, 40 калорий)</span>
           </label>
         </div>
         <div class="box stuffing_burger">
           <h3 class="burger_parameters_title">Выбери начинку бургера</h3>
           <label for="cheese">
-            <input class="stuffing_input" type="radio" name="stuffing" id="cheese">
+            <input class="stuffing_input" type="radio" name="stuffing" id="cheese" value="Cheese" data-price="10"
+              data-calories="20">
             <span class="text_input">С сыром (+10 рублей, +20 калорий)</span><br>
           </label>
           <label for="salad">
-            <input class="stuffing_input" type="radio" name="stuffing" id="salad">
+            <input class="stuffing_input" type="radio" name="stuffing" id="salad" value="Salad" data-price="20"
+              data-calories="5">
             <span class="text_input">С салатом (+20 рублей, +5 калорий)</span><br>
           </label>
           <label for="potatoes">
-            <input class="stuffing_input" type="radio" name="stuffing" id="potatoes">
+            <input class="stuffing_input" type="radio" name="stuffing" id="potatoes" value="Potatoes" data-price="15"
+              data-calories="10">
             <span class="text_input">С картофелем (+15 рублей, +10 калорий)</span>
           </label>
         </div>
         <div class="box topping_burger">
           <h3 class="burger_parameters_title">Выбери дополнительную приправу</h3>
-
           <label for="spice">
-            <input class="topping_input" type="checkbox" id="spice">
+            <input class="topping_input" type="checkbox" name="toppings" id="spice" value="Spice" data-price="15"
+              data-calories="0">
             <span class="text_input">Посыпать приправой (+15 рублей, +0 калорий)</span><br>
           </label>
           <label for="sauce">
-            <input class="topping_input" type="checkbox" id="sauce">
+            <input class="topping_input" type="checkbox" name="toppings" id="sauce" value="Sause" data-price="20"
+              data-calories="5">
             <span class="text_input">Полить майонезом (+20 рублей, +5 калорий)</span>
           </label>
         </div>
+        <button class="order_button" type="button">Заказать бургер</button>
+        <div class="result">
+          <p class="price">Итоговая стоимость бургера: <span>0</span> рублей.</p>
+          <p class="calories">Калорийность бургера: <span>0</span> ккал.</p>
+        </div>
+      </form>
     </div>
-    </form>
   </main>
 
   <script src="js/main.js"></script>
