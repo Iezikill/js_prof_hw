@@ -29,7 +29,14 @@
     One: 'Sure. Bye.'
   </p>
   <button>Заменить</button>
-  <script src="main.js"></script>
+  <script>
+    "use strict";
+
+    const textEl = document.querySelector('.text');
+    document.querySelector('button').addEventListener('click', () => {
+      textEl.textContent = textEl.textContent.replace(/\B'|'\B/g, '"');
+    });
+  </script>
 </body>
 
 </html>
