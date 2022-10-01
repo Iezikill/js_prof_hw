@@ -29,7 +29,7 @@ const app = new Vue({
             this.getJson(`${API}/addToBasket.json`)
                 .then(data => {
                     if (data.result === 1) {
-                        const find = this.cartItems.find(el => product.id == el.id);
+                        const find = this.cartItems.find(el => product.id_product == el.id_product);
                         if (find) {
                             find.quantity++;
                         } else {
