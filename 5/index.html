@@ -13,14 +13,17 @@
         <header>
             <div class="logo">E-shop</div>
             <div class="cart">
-                <form action="#" class="search-form" @submit.prevent="filter">
+                <filter-comp></filter-comp>
+                <!-- <form action="#" class="search-form" @submit.prevent="filter">
                     <input type="text" class="search-field" v-model="userSearch">
                     <button class="btn-search" type="submit">
                         <i class="fas fa-search"></i>
                     </button>
-                </form>
+                </form> -->
                 <button class="btn-cart" type="button" @click="show=!show">Корзина</button>
-                <div class="cart-block" v-show="show">
+
+                <cart :cart-items="cartItems" :img="imgCart" :visibility="show"></cart>
+                <!-- <div class="cart-block" v-show="show">
                     <h2 v-if="cartItems.length">Cart</h2>
                     <h2 v-if="!cartItems.length">Cart is empty</h2>
                     <div class="cart-item" v-for="product of cartItems">
@@ -38,10 +41,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </header>
         <main>
-            <div class="products">
+            <products :products="filtered" :img="imgCatalog" @add-product="addProduct"></products>
+            <!-- <div class="products">
                 <div class="product-item" v-for="product of filtered" :key=" product.id_product">
                     <img :src="imgCatalog" alt="Some img">
                     <div class="desc">
@@ -50,13 +54,16 @@
                         <button class="buy-btn" @click="addProduct(product)">Купить</button>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </main>
     </div>
     <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
         integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/FilterComponent.js"></script>
+    <script src="js/ProductComponent.js"></script>
+    <script src="js/CartComponent.js"></script>
     <script src="js/main.js"></script>
 </body>
 

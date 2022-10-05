@@ -12,6 +12,7 @@ const app = new Vue({
         cartUrl: '/getBasket.json',
         cartItems: [],
         imgCart: 'https://via.placeholder.com/50x50',
+        error: false
     },
     methods: {
         filter() {
