@@ -12,14 +12,14 @@ router.get('/', (req, res) => {
         }
     })
 });
-router.post('/', (req, res) => {
+router.post('/:id/:name', (req, res) => {
     handler(req, res, 'add', 'server/db/userCart.json');
 });
-router.put('/:id', (req, res) => {
+router.put('/:id/:name', (req, res) => {
     handler(req, res, 'change', 'server/db/userCart.json');
 });
-router.delete('/:id', (req, res) => {
+router.delete('/:id/:name', (req, res) => {
     handler(req, res, 'remove', 'server/db/userCart.json');
-})
+});
 
 module.exports = router;

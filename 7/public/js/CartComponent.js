@@ -53,17 +53,24 @@ Vue.component('cart', {
             //     })
         },
         remove(item) {
-            this.$parent.getJson(`${API}/addToBasket.json`)
-                .then(data => {
-                    if (data.result === 1) {
-                        if (item.quantity > 1) {
+            if (item.quantity > 1) {
+                this.$parent.putJson(`/api/cart/${item.id_product}/${item.product_name}`, { quantity: -1 })
+                    .then(data => {
+                        if (data.result) {
                             item.quantity--;
-                        } else {
-                            this.cartItems.splice(this.cartItems.indexOf(item), 1);
                         }
-                    }
-                })
-        },
+                    })
+            } else {
+                this.$parent.delJson(`/api/cart/${item.id_product}/${item.product_name}`, item)
+                    .then(data => {
+                        if (data.result) {
+                            this.cartItems.splice(this.cartItems.indexOf(item), 1);
+                        } else {
+                            console.log('error');
+                        }
+                    })
+            }
+        }
     },
     template: `<div>
 <button class="btn-cart" type="button" @click="showCart = !showCart">Корзина</button>
